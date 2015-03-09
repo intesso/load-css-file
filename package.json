@@ -1,0 +1,28 @@
+{
+	"name": "load-css-file",
+	"version": "1.0.0",
+	"description": "insert css file into the `<head>` element",
+	"main": "index.js",
+	"scripts": {
+		"test": "browserify test/*.js | testling",
+		"build": "browserify index.js -o dist/load-css-file.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/intesso/load-css-file.git"
+	},
+	"keywords": [
+		"load",
+		"css",
+		"file"
+	],
+	"author": "Andi Neck",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/intesso/load-css-file/issues"
+	},
+	"homepage": "https://github.com/intesso/load-css-file",
+	"devDependencies": {
+		"tape": "^3.5.0"
+	}
+}
