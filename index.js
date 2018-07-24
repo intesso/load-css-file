@@ -1,4 +1,4 @@
-module.exports = function(attributes) {
+module.exports = exports = function(attributes, firstChild) {
 	// setting default attributes
 	if (typeof attributes === "string") {
 		var href = attributes;
@@ -15,5 +15,10 @@ module.exports = function(attributes) {
 		styleSheet.setAttribute(key, attributes[key]);
 	}
 	var head = document.getElementsByTagName("head")[0];
-	head.appendChild(styleSheet);
+	
+	if (firstChild) {
+		head.insertBefore(styleSheet, head.firstChild);
+	} else {
+		head.appendChild(styleSheet);
+	}
 };
